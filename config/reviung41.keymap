@@ -116,7 +116,7 @@
         compatible = "zmk,combos";
         combo_RESET {
             timeout-ms = <50>;
-            key-positions = <14 15 16 19 20 21>;
+            key-positions = <12 17 18 23>;
             bindings = <&rch A A>;
         };
 
