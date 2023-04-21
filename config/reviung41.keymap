@@ -253,7 +253,7 @@
                 tapping-term-ms = <200>;
                 quick-tap-ms = <100>;
                 global-quick-tap;
-                bindings = <&mo_NUM_SYM>, <&kp>;
+                bindings = <&mo_SYM>, <&kp>;
         };
 
         rch: reset-combo-hold {
