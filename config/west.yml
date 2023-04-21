@@ -2,10 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: testing
+      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: testing
+      revision: zephyr/test-llcp-conn-update-fix
       import: app/west.yml
   self:
     path: config
