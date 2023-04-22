@@ -6,8 +6,10 @@ manifest:
       url-base: https://github.com/petejohanson
   projects:
     - name: zmk
-      remote: testing
-      revision: zephyr/test-llcp-conn-update-fix
+      remote: zmkfirmware
+#      remote: testing
+      revision: main
+#      revision: zephyr/test-llcp-conn-update-fix
       import: app/west.yml
   self:
     path: config
