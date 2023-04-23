@@ -120,6 +120,12 @@
             bindings = <&rch A A>;
         };
 
+        combo_RGB {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&rgb_ug RGB_TOG>;
+        };
+
         combo_LPAR {
             timeout-ms = <30>;
             key-positions = <15 16>;
