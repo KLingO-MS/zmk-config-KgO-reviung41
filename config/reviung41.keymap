@@ -132,6 +132,12 @@
             bindings = <&rgb_ug RGB_EFF>;
         };
 
+        combo_PRTSCRN {
+            timeout-ms = <50>;
+            key-positions = <11 35>;
+            bindings = <&kp PSCRN>;
+        };
+
         combo_LPAR {
             timeout-ms = <30>;
             key-positions = <15 16>;
