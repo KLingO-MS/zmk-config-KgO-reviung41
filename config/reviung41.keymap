@@ -289,14 +289,14 @@
 
                 base_layer {
 // --------------------------------------------------------------------------------
-// | ESC  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  |  '  |  DEL  |
+// | ESC  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  |  X  |  DEL  |
 // | TAB  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  | ENTER |
-// | CTRL |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H  |  ,  |  .  |  /  |  INS  |
+// | CTRL |  ,  |  .  |  C  |  D  |  V  |   |  K  |  H  |  Z  |  '  |  /  |  INS  |
 //           | GUI | SHIFT(BKSPC) | _NAV(LOCK_NAV) | _NUM_SYM(SPC) | ALT |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp F &kp P &kp B       &kp J &kp L &kp U     &kp Y   &kp SQT  &kp DEL 
-   &kp TAB   &kp A &kp R &kp S &kp T &kp G       &kp M &kp N &kp E     &kp I   &kp O    &kp ENTER 
-   &kp LCTRL &kp Z &kp X &kp C &kp D &kp V       &kp K &kp H &kp COMMA &kp DOT &kp FSLH &kp INS 
+   &kp ESC   &kp Q     &kp W   &kp F &kp P &kp B       &kp J &kp L &kp U     &kp Y   &kp X    &kp DEL 
+   &kp TAB   &kp A     &kp R   &kp S &kp T &kp G       &kp M &kp N &kp E     &kp I   &kp O    &kp ENTER 
+   &kp LCTRL &kp COMMA &kp DOT &kp C &kp D &kp V       &kp K &kp H &kp Z     &kp SQT &kp FSLH &kp INS 
                 &kp LGUI &gqt LSHIFT BSPC &nav_td &spctap X SPACE &kp LALT
                         >;
                 };
@@ -305,12 +305,12 @@
 // -----------------------------------------------------------------------------
 // |  ˇ  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  ˇ  |
 // |  ˇ  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  ˇ  |
-// |  ˇ  | "|" |  `  |  ~  |  _  |  =  |   |  +  |  -  |  ;  |  :  |  \  |  ˇ  |
+// |  ˇ  |  ;  |  :  |  =  |  _  |  ~  |   |  `  |  -  |  +  | '|' |  \  |  ˇ  |
 //                        |  ˇ  |  ˇ  | SPC |     |  ˇ  |
                         bindings = <
    &trans &kp EXCL &kp AT    &kp HASH  &kp DLLR  &kp PRCNT       &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR &trans
    &trans &kp N1   &kp N2    &kp N3    &kp N4    &kp N5          &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &trans
-   &trans &kp PIPE &kp GRAVE &kp TILDE &kp UNDER &kp EQUAL       &kp PLUS  &kp MINUS &kp SEMI  &kp COLON &kp BSLH &trans
+   &trans &kp SEMI &kp COLON &kp EQUAL &kp UNDER &kp TILDE       &kp GRAVE &kp MINUS &kp PLUS  &kp PIPE  &kp BSLH &trans
                                           &trans &trans &kp SPACE &trans &trans
                         >;
                 };
