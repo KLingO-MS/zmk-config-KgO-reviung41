@@ -180,19 +180,34 @@
             layers = <_BASE _SYM>;
         };
 
-        // combo_LT {
-        //     timeout-ms = <30>;
-        //     key-positions = <13 14>;
-        //     bindings = <&kp LT>;
-        //     layers = <_BASE _SYM>;
-        // };
+        combo_LT {
+            timeout-ms = <30>;
+            key-positions = <16 28>;
+            bindings = <&kp LT>;
+            layers = <_BASE _SYM>;
+        };
 
-        // combo_GT {
-        //     timeout-ms = <30>;
-        //     key-positions = <21 22>;
-        //     bindings = <&kp GT>;
-        //     layers = <_BASE _SYM>;
-        // };
+        combo_GT {
+            timeout-ms = <30>;
+            key-positions = <19 31>;
+            bindings = <&kp GT>;
+            layers = <_BASE _SYM>;
+        };
+
+        combo_SEMI {
+            timeout-ms = <30>;
+            key-positions = <20 32>;
+            bindings = <&kp SEMI>;
+            layers = <_BASE _SYM>;
+        };
+
+        combo_COLON {
+            timeout-ms = <30>;
+            key-positions = <21 33>;
+            bindings = <&kp COLON>;
+            layers = <_BASE _SYM>;
+        };
+
     };
 };
 
