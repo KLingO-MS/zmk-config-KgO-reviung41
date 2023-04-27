@@ -116,19 +116,19 @@
         compatible = "zmk,combos";
         combo_RESET {
             timeout-ms = <50>;
-            key-positions = <12 17 18 23>;
+            key-positions = <4 5 6 7>;
             bindings = <&rch A A>;
         };
 
         combo_RGB_TOG {
             timeout-ms = <50>;
-            key-positions = <5 6>;
+            key-positions = <17 18>;
             bindings = <&rgb_ug RGB_TOG>;
         };
 
         combo_RGB_EFF {
             timeout-ms = <50>;
-            key-positions = <17 18>;
+            key-positions = <29 30>;
             bindings = <&rgb_ug RGB_EFF>;
         };
 
