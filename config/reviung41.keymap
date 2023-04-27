@@ -182,56 +182,56 @@
 
         combo_LT {
             timeout-ms = <30>;
-            key-positions = <16 28>;
+            key-positions = <4 16>;
             bindings = <&kp LT>;
             layers = <_BASE _SYM>;
         };
 
         combo_GT {
             timeout-ms = <30>;
-            key-positions = <19 31>;
+            key-positions = <7 19>;
             bindings = <&kp GT>;
             layers = <_BASE _SYM>;
         };
 
-        combo_SEMI {
-            timeout-ms = <30>;
-            key-positions = <20 32>;
-            bindings = <&kp SEMI>;
-            layers = <_BASE _SYM>;
-        };
+        // combo_SEMI {
+        //     timeout-ms = <30>;
+        //     key-positions = <20 32>;
+        //     bindings = <&kp SEMI>;
+        //     layers = <_BASE _SYM>;
+        // };
 
-        combo_COLON {
-            timeout-ms = <30>;
-            key-positions = <21 33>;
-            bindings = <&kp COLON>;
-            layers = <_BASE _SYM>;
-        };
+        // combo_COLON {
+        //     timeout-ms = <30>;
+        //     key-positions = <21 33>;
+        //     bindings = <&kp COLON>;
+        //     layers = <_BASE _SYM>;
+        // };
 
         combo_SQT {
             timeout-ms = <30>;
-            key-positions = <7 19>;
+            key-positions = <8 20>;
             bindings = <&kp SQT>;
             layers = <_BASE _SYM>;
         };
 
         combo_DQT {
             timeout-ms = <30>;
-            key-positions = <4 16>;
+            key-positions = <3 15>;
             bindings = <&kp DQT>;
             layers = <_BASE _SYM>;
         };
 
         combo_FSLH {
             timeout-ms = <30>;
-            key-positions = <8 20>;
+            key-positions = <19 31>;
             bindings = <&kp FSLH>;
             layers = <_BASE _SYM>;
         };
 
         combo_BSLH {
             timeout-ms = <30>;
-            key-positions = <3 15>;
+            key-positions = <16 28>;
             bindings = <&kp BSLH>;
             layers = <_BASE _SYM>;
         };
@@ -325,6 +325,22 @@
                 tapping-term-ms = <3000>;
                 bindings = <&to_BOOT>, <&sys_reset>;
         };
+
+        com_sem: comma_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SEMI";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        dot_col: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
         keymap {
@@ -334,12 +350,12 @@
 // --------------------------------------------------------------------------------
 // | ESC  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  |  Z  | DEL |
 // | GUI  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  | TAB |
-// | CTRL |  '  |  X  |  C  |  D  |  V  |   |  K  |  H  |  ,  |  .  |  /  | INS |
+// | CTRL |  '  |  X  |  C  |  D  |  V  |   |  K  |  H  | , ; | . : |  /  | INS |
 //    | _NAV(LOCK_NAV) | SHIFT(BKSPC) | ENTER | _NUM_SYM(SPC) | ALT |
                         bindings = <
-   &kp ESC   &kp Q   &kp W &kp F &kp P &kp B       &kp J &kp L &kp U     &kp Y   &kp Z    &kp DEL 
-   &kp LGUI  &kp A   &kp R &kp S &kp T &kp G       &kp M &kp N &kp E     &kp I   &kp O    &kp TAB 
-   &kp LCTRL &kp SQT &kp X &kp C &kp D &kp V       &kp K &kp H &kp COMMA &kp DOT &kp FSLH &kp INS 
+   &kp ESC   &kp Q   &kp W &kp F &kp P &kp B       &kp J &kp L &kp U    &kp Y    &kp Z    &kp DEL 
+   &kp LGUI  &kp A   &kp R &kp S &kp T &kp G       &kp M &kp N &kp E    &kp I    &kp O    &kp TAB 
+   &kp LCTRL &kp SQT &kp X &kp C &kp D &kp V       &kp K &kp H &com_sem &dot_col &kp FSLH &kp INS 
                  &nav_td &gqt LSHIFT BSPC &kp ENTER &spctap X SPACE &kp LALT
                         >;
                 };
@@ -348,12 +364,12 @@
 // -----------------------------------------------------------------------------
 // |  ˇ  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  ˇ  |
 // |  ˇ  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  ˇ  |
-// |  ˇ  | '|' |  _  |  =  |  +  |  ~  |   |  `  |  -  |  ;  |  :  |  \  |  ˇ  |
+// |  ˇ  |  "  | '|' |  =  |  +  |  ~  |   |  `  |  -  |  _  |  ?  |  \  |  ˇ  |
 //                        |  ˇ  |  ˇ  | SPC |     |  ˇ  |
                         bindings = <
    &trans &kp EXCL &kp AT    &kp HASH  &kp DLLR  &kp PRCNT       &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR &trans
    &trans &kp N1   &kp N2    &kp N3    &kp N4    &kp N5          &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &trans
-   &trans &kp PIPE &kp UNDER &kp EQUAL &kp PLUS  &kp TILDE       &kp GRAVE &kp MINUS &kp SEMI  &kp COLON &kp BSLH &trans
+   &trans &kp DQT  &kp PIPE  &kp EQUAL &kp PLUS  &kp TILDE       &kp GRAVE &kp MINUS &kp UNDER &kp QMARK &kp BSLH &trans
                                          &kp SPACE &trans &trans &trans &trans
                         >;
                 };
