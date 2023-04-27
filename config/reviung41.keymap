@@ -289,15 +289,15 @@
 
                 base_layer {
 // --------------------------------------------------------------------------------
-// | ESC  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  |  Z  |  DEL  |
-// | TAB  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  | ENTER |
-// | CTRL |  '  |  X  |  C  |  D  |  V  |   |  K  |  H  |  ,  |  .  |  /  |  INS  |
-//           | GUI | SHIFT(BKSPC) | _NAV(LOCK_NAV) | _NUM_SYM(SPC) | ALT |
+// | ESC  |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  |  Z  | DEL |
+// | GUI  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  | TAB |
+// | CTRL |  '  |  X  |  C  |  D  |  V  |   |  K  |  H  |  ,  |  .  |  /  | INS |
+//    | _NAV(LOCK_NAV) | SHIFT(BKSPC) | ENTER | _NUM_SYM(SPC) | ALT |
                         bindings = <
    &kp ESC   &kp Q   &kp W &kp F &kp P &kp B       &kp J &kp L &kp U     &kp Y   &kp Z    &kp DEL 
-   &kp TAB   &kp A   &kp R &kp S &kp T &kp G       &kp M &kp N &kp E     &kp I   &kp O    &kp ENTER 
+   &kp LGUI  &kp A   &kp R &kp S &kp T &kp G       &kp M &kp N &kp E     &kp I   &kp O    &kp TAB 
    &kp LCTRL &kp SQT &kp X &kp C &kp D &kp V       &kp K &kp H &kp COMMA &kp DOT &kp FSLH &kp INS 
-                 &kp LGUI &gqt LSHIFT BSPC &nav_td &spctap X SPACE &kp LALT
+                 &nav_td &gqt LSHIFT BSPC &kp ENTER &spctap X SPACE &kp LALT
                         >;
                 };
 
@@ -311,7 +311,7 @@
    &trans &kp EXCL &kp AT    &kp HASH  &kp DLLR  &kp PRCNT       &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR &trans
    &trans &kp N1   &kp N2    &kp N3    &kp N4    &kp N5          &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &trans
    &trans &kp PIPE &kp UNDER &kp EQUAL &kp PLUS  &kp TILDE       &kp GRAVE &kp MINUS &kp SEMI  &kp COLON &kp BSLH &trans
-                                         &trans &trans &kp SPACE &trans &trans
+                                         &kp SPACE &trans &trans &trans &trans
                         >;
                 };
 
@@ -325,7 +325,7 @@
    &trans &kp F1       &kp F2       &kp F3       &kp F4       &kp F5            &kp F11      &kp HOME     &kp UP       &kp END      &kp PG_UP  &trans
    &trans &kp F6       &kp F7       &kp F8       &kp F9       &kp F10           &kp F12      &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_DN  &trans
    &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &out OUT_TOG &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &bt BT_CLR &trans
-                                                         &trans &trans &to_BASE &kp SPACE &trans
+                                                         &to_BASE &trans &trans &kp SPACE &trans
                         >;
                 };
 
