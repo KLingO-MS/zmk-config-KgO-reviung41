@@ -355,7 +355,7 @@
                         bindings = <
    &kp ESC   &kp SQT &kp W &kp F &kp P &kp K       &kp V &kp L &kp U    &kp Y    &kp J &kp DEL 
    &kp LGUI  &kp A   &kp R &kp S &kp T &kp G       &kp M &kp N &kp E    &kp I    &kp O &kp TAB 
-   &kp LCTRL &kp Z   &kp X &kp C &kp D &kp Q       &kp Z &kp H &com_sem &dot_col &kp X &kp INS 
+   &kp LCTRL &kp Z   &kp B &kp C &kp D &kp Q       &kp Z &kp H &com_sem &dot_col &kp X &kp INS 
                  &nav_td &gqt LSHIFT BSPC &kp ENTER &spctap X SPACE &kp LALT
                         >;
                 };
