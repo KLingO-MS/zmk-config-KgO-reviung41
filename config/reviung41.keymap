@@ -247,7 +247,7 @@
 
         qmk_exc: qmark_excl {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_COLON";
+            label = "QMARK_EXCL";
             #binding-cells = <0>;
             bindings = <&kp QMARK>, <&kp EXCL>;
             mods = <(MOD_LSFT)>;
