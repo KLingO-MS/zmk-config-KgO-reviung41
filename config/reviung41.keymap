@@ -24,7 +24,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
-                = <&rgb_ug RGB_COLOR_HSB(15,95,3)>
+                = <&rgb_ug RGB_COLOR_HSB(15,0,3)>
                 , <&to _BASE>
                 ;
         };
@@ -51,7 +51,7 @@
                 = <&macro_tap &rgb_ug RGB_COLOR_HSB(180,100,3)>
                 , <&macro_press &mo _NAV>
                 , <&macro_pause_for_release>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(15,95,3)>
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(15,0,3)>
                 , <&macro_release &mo _NAV>
                 ;
         };
@@ -63,40 +63,13 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
-                = <&macro_tap &rgb_ug RGB_COLOR_HSB(45,95,3)>
+                = <&macro_tap &rgb_ug RGB_COLOR_HSB(15,95,3)>
                 , <&macro_press &mo _SYM>
                 , <&macro_pause_for_release>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(15,95,3)>
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(15,0,3)>
                 , <&macro_release &mo _SYM>
                 ;
         };
-
-        // mo_FKEYS: mo_FKEYS {
-        //     label = "ZM_mo_FKEYS";
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     wait-ms = <0>;
-        //     tap-ms = <0>;
-        //     bindings
-        //         = <&macro_tap &rgb_ug RGB_COLOR_HSB(300,100,3)>
-        //         , <&macro_press &mo _FKEYS>
-        //         , <&macro_pause_for_release>
-        //         , <&macro_tap &rgb_ug RGB_COLOR_HSB(15,95,2)>
-        //         , <&macro_release &mo _FKEYS>
-        //         ;
-        // };
-
-        // to_NUMPAD: to_NUMPAD {
-        //     label = "ZM_to_NUMPAD";
-        //     compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     wait-ms = <0>;
-        //     tap-ms = <0>;
-        //     bindings
-        //         = <&rgb_ug RGB_COLOR_HSB(200,100,3)>
-        //         , <&to _NUMPAD>
-        //         ;
-        // };
 
         to_BOOT: to_BOOT {
             label = "ZM_to_BOOT";
@@ -194,34 +167,6 @@
             layers = <_BASE _SYM>;
         };
 
-        // combo_SEMI {
-        //     timeout-ms = <30>;
-        //     key-positions = <20 32>;
-        //     bindings = <&kp SEMI>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_COLON {
-        //     timeout-ms = <30>;
-        //     key-positions = <21 33>;
-        //     bindings = <&kp COLON>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_SQT {
-        //     timeout-ms = <30>;
-        //     key-positions = <8 20>;
-        //     bindings = <&kp SQT>;
-        //     layers = <_BASE _SYM>;
-        // };
-
-        // combo_DQT {
-        //     timeout-ms = <30>;
-        //     key-positions = <3 15>;
-        //     bindings = <&kp DQT>;
-        //     layers = <_BASE _SYM>;
-        // };  
-
         combo_FSLH {
             timeout-ms = <30>;
             key-positions = <7 8>;
@@ -253,56 +198,14 @@
             bindings = <&mo_NAV>, <&to_NAV>;
         };
  
-        // td1: tap_dance_1 {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     label = "LOCK_NUMPAD";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <400>;
-        //     bindings = <&mo_FKEYS>, <&to_NUMPAD>;
-        // };
-
-        // ctrl_c_v: ctrl_c_v {
-        //         compatible = "zmk,behavior-tap-dance";
-        //         label = "CTRL_COPY_PASTA";
-        //         #binding-cells = <0>;
-        //         tapping-term-ms = <400>;
-        //         bindings = <&kp LC(C)>, <&kp LC(V)>;
-        // };
-
-        // gui_c_v: gui_c_v {
-        //         compatible = "zmk,behavior-tap-dance";
-        //         label = "GUI_COPY_PASTA";
-        //         #binding-cells = <0>;
-        //         tapping-term-ms = <400>;
-        //         bindings = <&kp LG(C)>, <&kp LG(V)>;
-        // };
-
-        // ctrl_x: ctrl_x {
-        //         compatible = "zmk,behavior-hold-tap";
-        //         label = "CTRL_CUT_HOLD";
-        //         #binding-cells = <2>;
-        //         flavor = "tap-preferred";
-        //         tapping-term-ms = <400>;
-        //         bindings = <&kp>, <&ctrl_c_v>;
-        // };
-
-        // gui_x: gui_x {
-        //         compatible = "zmk,behavior-hold-tap";
-        //         label = "GUI_CUT_HOLD";
-        //         #binding-cells = <2>;
-        //         flavor = "tap-preferred";
-        //         tapping-term-ms = <400>;
-        //         bindings = <&kp>, <&gui_c_v>;
-        // };
-
-        gqt: global-quick-tap {
+        bspctap: backspace-tap {
                 compatible = "zmk,behavior-hold-tap";
-                label = "GLOBAL_QUICK_TAP";
+                label = "BACKSPACE_TAP_SHIFT_HOLD";
                 #binding-cells = <2>;
                 flavor = "balanced";
                 tapping-term-ms = <200>;
                 quick-tap-ms = <170>;
-                global-quick-tap;
+                // global-quick-tap;
                 bindings = <&kp>, <&kp>;
         };
 
@@ -313,7 +216,7 @@
                 flavor = "balanced";
                 tapping-term-ms = <200>;
                 quick-tap-ms = <170>;
-                global-quick-tap;
+                // global-quick-tap;
                 bindings = <&mo_SYM>, <&kp>;
         };
 
@@ -341,21 +244,29 @@
             bindings = <&kp DOT>, <&kp COLON>;
             mods = <(MOD_LSFT)>;
         };
+
+        qmk_exc: qmark_excl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COLON";
+            #binding-cells = <0>;
+            bindings = <&kp QMARK>, <&kp EXCL>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
         keymap {
                 compatible = "zmk,keymap";
 
                 base_layer {
-// --------------------------------------------------------------------------------
-// | ESC  |  '  |  W  |  F  |  P  |  V  |   |  K  |  L  |  U  |  Y  |  J  | DEL |
+// ------------------------------------------------------------------------------
+// | ESC  |  Q  |  W  |  F  |  P  |  B  |   |  K  |  L  |  U  |  Y  | ' " | DEL |
 // | GUI  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  | TAB |
-// | CTRL |  Z  |  B  |  C  |  D  |  Q  |   |  Z  |  H  | , ; | . : |  X  | INS |
+// | CTRL |  X  |  Z  |  C  |  D  |  V  |   |  J  |  H  | , ; | . : | ? ! | INS |
 //    | _NAV(LOCK_NAV) | SHIFT(BKSPC) | ENTER | _NUM_SYM(SPC) | ALT |
                         bindings = <
-   &kp ESC   &kp SQT &kp W &kp F &kp P &kp V       &kp K &kp L &kp U    &kp Y    &kp J &kp DEL 
-   &kp LGUI  &kp A   &kp R &kp S &kp T &kp G       &kp M &kp N &kp E    &kp I    &kp O &kp TAB 
-   &kp LCTRL &kp Z   &kp B &kp C &kp D &kp Q       &kp Z &kp H &com_sem &dot_col &kp X &kp INS 
+   &kp ESC   &kp Q &kp W &kp F &kp P &kp B       &kp K &kp L &kp U    &kp Y    &kp SQT  &kp DEL 
+   &kp LGUI  &kp A &kp R &kp S &kp T &kp G       &kp M &kp N &kp E    &kp I    &kp O    &kp TAB 
+   &kp LCTRL &kp X &kp Z &kp C &kp D &kp V       &kp J &kp H &com_sem &dot_col &qmk_exc &kp INS 
                  &nav_td &gqt LSHIFT BSPC &kp ENTER &spctap X SPACE &kp LALT
                         >;
                 };
@@ -375,7 +286,7 @@
                 };
 
                 nav_layer {
-// -------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 // |  ˇ  |  F1 |  F2 |  F3 |  F4 |  F5 |   | F11 | HOME |  UP  | END  | PGUP |  ˇ  |
 // |  ˇ  |  F6 |  F7 |  F8 |  F9 | F10 |   | F12 | LEFT | DOWN | RGHT | PGDN |  ˇ  |
 // |  ˇ  | BT1 | BT2 | BT3 | BT4 | BT5 |   | USB | VOL- | MUTE | VOL+ | BT_C |  ˇ  |
@@ -388,32 +299,6 @@
                         >;
                 };
 
-                // fkeys_layer {
-// -----------------------------------------------------------------------------------
-// | ESC | F1 | F2  | F3  | F4  |    |   |    | CALC | c,v,x | c,v,x |      |  DEL   |
-// |     | F5 | F6  | F7  | F8  |    |   |    | INS  | sGUI  | sCTRL | sALT | sSHIFT |
-// |  Z  | F9 | F10 | F11 | F12 |    |   |    | APP  |  TAB  |       |      |  RET   |
-//                   | SPACE | BKSPC |   |       |      |
-//                         bindings = <
-//    &kp ESC &kp F1 &kp F2  &kp F3  &kp F4  &none      &none &kp C_AL_CALC &gui_x LG(X) X &ctrl_x LC(X) X &none    &kp DEL
-//    &none   &kp F5 &kp F6  &kp F7  &kp F8  &none      &none &kp INS       &sk LGUI       &sk LCTRL       &sk LALT &sk LSHIFT
-//    &kp Z   &kp F9 &kp F10 &kp F11 &kp F12 &none      &none &kp K_APP     &kp TAB        &none           &none    &kp RET
-//                                &kp SPACE &kp BSPC &none &none &none
-//                         >;
-//                 };
 
-//                 numpad_layer {
-// ---------------------------------------------------------------------------------------
-// | ESC     | PREV | PLAYP | NEXT | BT CLR  |    |   |    |  /  |  7  |  8  |  9  |  -  |
-// | RGB_TOG | VOL- | MUTE  | VOL+ | OUT_TOG |    |   |    |  *  |  4  |  5  |  6  |  +  |
-// | BT1     | BT2  | BT3   | BT4  | BT5     |    |   |    |  .  |  1  |  2  |  3  |  0  |
-//                                | _BASE | BKSPC |   | ENTER | _BASE |
-//                         bindings = <
-//    &kp ESC         &kp C_PREV   &kp C_PP     &kp C_NEXT   &bt BT_CLR    &none      &none  &kp KP_DIVIDE    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS
-//    &rgb_ug RGB_TOG &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &out OUT_TOG  &none      &none  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS
-//    &bt BT_SEL 0    &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &none      &none  &kp KP_DOT       &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N0
-//                                                         &to_BASE &kp BSPC &none &kp KP_ENTER &to_BASE
-//                         >;
-//                 };
         };
 };
