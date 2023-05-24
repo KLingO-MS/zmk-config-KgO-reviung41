@@ -184,8 +184,8 @@
             label = "BACKSPACE_TAP_SHIFT_HOLD";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <170>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <200>;
          // global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
@@ -195,8 +195,8 @@
             label = "SPACE_TAP_MO_SYM_HOLD";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <170>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <200>;
          // global-quick-tap;
             bindings = <&mo_SYM>, <&kp>;
         };
@@ -243,7 +243,7 @@
 // | ESC  |  Q  |  W  |  F  |  P  |  B  |   |  K  |  L  |  U  |  Y  | ' " | DEL |
 // | GUI  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  | TAB |
 // | CTRL |  X  |  Z  |  C  |  D  |  V  |   |  J  |  H  | , ; | . : | ? ! | INS |
-//    | _NAV(LOCK_NAV) | SHIFT(BKSPC) | ENTER | _NUM_SYM(SPC) | ALT |
+//        | (LOCK)_NAV | SHIFT(BKSPC) | ENTER | _SYM(SPC) | ALT |
                         bindings = <
    &kp ESC   &kp Q &kp W &kp F &kp P &kp B       &kp K &kp L &kp U    &kp Y    &kp SQT  &kp DEL 
    &kp LGUI  &kp A &kp R &kp S &kp T &kp G       &kp M &kp N &kp E    &kp I    &kp O    &kp TAB 
@@ -257,7 +257,7 @@
 // |  ˇ  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  ˇ  |
 // |  ˇ  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  ˇ  |
 // |  ˇ  |  \  |  ?  |  _  |  -  |  `  |   |  ~  |  +  |  =  |  |  |  /  |  ˇ  |
-//                        |  ˇ  |  ˇ  | SPC |     |  ˇ  |
+//                        | SPC |  ˇ  |  ˇ  |     |  ˇ  |
                         bindings = <
    &trans &kp EXCL &kp AT    &kp HASH  &kp DLLR  &kp PRCNT       &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR &trans
    &trans &kp N1   &kp N2    &kp N3    &kp N4    &kp N5          &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &trans
@@ -271,7 +271,7 @@
 // |  ˇ  |  F1 |  F2 |  F3 |  F4 |  F5 |   | F11 | HOME |  UP  | END  | PGUP |  ˇ  |
 // |  ˇ  |  F6 |  F7 |  F8 |  F9 | F10 |   | F12 | LEFT | DOWN | RGHT | PGDN |  ˇ  |
 // |  ˇ  | BT1 | BT2 | BT3 | BT4 | BT5 |   | USB | VOL- | MUTE | VOL+ | BT_C |  ˇ  |
-//                        |  ˇ  |  ˇ  | _BASE | SPC |  ˇ  |
+//                        | _BASE |  ˇ  |  ˇ  | SPC |  ˇ  |
                         bindings = <
    &trans &kp F1       &kp F2       &kp F3       &kp F4       &kp F5            &kp F11      &kp HOME     &kp UP       &kp END      &kp PG_UP  &trans
    &trans &kp F6       &kp F7       &kp F8       &kp F9       &kp F10           &kp F12      &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_DN  &trans
