@@ -238,35 +238,35 @@
         keymap {
                 compatible = "zmk,keymap";
 
-// ColemaSK
-//                 base_layer {
-// // ------------------------------------------------------------------------------
-// // | ESC  |  Q  |  W  |  F  |  P  |  B  |   |  K  |  L  |  U  |  Y  | ' " | DEL |
-// // | GUI  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  | TAB |
-// // | CTRL |  X  |  Z  |  C  |  D  |  V  |   |  J  |  H  | , ; | . : | ? ! | INS |
-// //        | (LOCK)_NAV | SHIFT(BKSPC) | ENTER | _SYM(SPC) | ALT |
-//                         bindings = <
-//    &kp ESC   &kp Q &kp W &kp F &kp P &kp B       &kp K &kp L &kp U    &kp Y    &kp SQT  &kp DEL 
-//    &kp LGUI  &kp A &kp R &kp S &kp T &kp G       &kp M &kp N &kp E    &kp I    &kp O    &kp TAB 
-//    &kp LCTRL &kp X &kp Z &kp C &kp D &kp V       &kp J &kp H &com_sem &dot_col &qmk_exc &kp INS 
-//                  &nav_td &bspctap LSHIFT BSPC &kp ENTER &spctap X SPACE &kp LALT
-//                         >;
-//                 };
-
                 base_layer {
-// ENGRAM SK
+// ColemaSK
 // ------------------------------------------------------------------------------
-// | ESC  |  B  |  Y  |  O  |  U  |  X  |   |  Q  |  L  |  D  |  W  |  V  | DEL |
-// | GUI  |  C  |  I  |  E  |  A  | , ; |   | . : |  H  |  T  |  S  |  N  | TAB |
-// | CTRL |  G  |  Z  |  J  |  K  | ? ! |   | ' " |  R  |  M  |  F  |  P  | INS |
+// | ESC  |  Q  |  W  |  V  |  P  |  B  |   |  K  |  L  |  U  |  Y  |  J  | DEL |
+// | GUI  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  | TAB |
+// | CTRL |  '  |  Z  |  C  |  D  |  F  |   |  X  |  H  | , ; | . : |  "  | INS |
 //        | (LOCK)_NAV | SHIFT(BKSPC) | ENTER | _SYM(SPC) | ALT |
                         bindings = <
-   &kp ESC   &kp B &kp Y &kp O &kp U &kp X       &kp Q    &kp L &kp D &kp W &kp V &kp DEL 
-   &kp LGUI  &kp C &kp I &kp E &kp A &com_sem    &dot_col &kp H &kp T &kp S &kp N &kp TAB 
-   &kp LCTRL &kp G &kp Z &kp J &kp K &qmk_exc    &kp SQT  &kp R &kp M &kp F &kp P &kp INS 
+   &kp ESC   &kp Q   &kp W &kp V &kp P &kp B       &kp K &kp L &kp U    &kp Y    &kp J   &kp DEL 
+   &kp LGUI  &kp A   &kp R &kp S &kp T &kp G       &kp M &kp N &kp E    &kp I    &kp O   &kp TAB 
+   &kp LCTRL &kp SQT &kp Z &kp C &kp D &kp F       &kp X &kp H &com_sem &dot_col &kp DQT &kp INS 
                  &nav_td &bspctap LSHIFT BSPC &kp ENTER &spctap X SPACE &kp LALT
                         >;
                 };
+
+//                 base_layer {
+// // ENGRAM SK
+// // ------------------------------------------------------------------------------
+// // | ESC  |  B  |  Y  |  O  |  U  |  X  |   |  Q  |  L  |  D  |  W  |  V  | DEL |
+// // | GUI  |  C  |  I  |  E  |  A  | , ; |   | . : |  H  |  T  |  S  |  N  | TAB |
+// // | CTRL |  G  |  Z  |  J  |  K  | ? ! |   | ' " |  R  |  M  |  F  |  P  | INS |
+// //        | (LOCK)_NAV | SHIFT(BKSPC) | ENTER | _SYM(SPC) | ALT |
+//                         bindings = <
+//    &kp ESC   &kp B &kp Y &kp O &kp U &kp X       &kp Q    &kp L &kp D &kp W &kp V &kp DEL 
+//    &kp LGUI  &kp C &kp I &kp E &kp A &com_sem    &dot_col &kp H &kp T &kp S &kp N &kp TAB 
+//    &kp LCTRL &kp G &kp Z &kp J &kp K &qmk_exc    &kp SQT  &kp R &kp M &kp F &kp P &kp INS 
+//                  &nav_td &bspctap LSHIFT BSPC &kp ENTER &spctap X SPACE &kp LALT
+//                         >;
+//                 };
 
                 sym_layer {
 // -----------------------------------------------------------------------------
