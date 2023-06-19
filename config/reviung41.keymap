@@ -286,13 +286,13 @@
 // ---------------------------------------------------------------------------------
 // |  ˇ  |  F1 |  F2 |  F3 |  F4 |  F5 |   | F11 | HOME |  UP  | END  | PGUP |  ˇ  |
 // |  ˇ  |  F6 |  F7 |  F8 |  F9 | F10 |   | F12 | LEFT | DOWN | RGHT | PGDN |  ˇ  |
-// |  ˇ  | BT1 | BT2 | BT3 | BT4 | BT5 |   | USB | VOL- | MUTE | VOL+ | BT_C |  ˇ  |
+// |  ˇ  |     |     |     |     |     |   |     | VOL- | MUTE | VOL+ |      |  ˇ  |
 //                        | _BASE |  ˇ  |  ˇ  | SPC |  ˇ  |
                         bindings = <
-   &trans &kp F1       &kp F2       &kp F3       &kp F4       &kp F5            &kp F11      &kp HOME     &kp UP       &kp END      &kp PG_UP  &trans
-   &trans &kp F6       &kp F7       &kp F8       &kp F9       &kp F10           &kp F12      &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_DN  &trans
-   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &out OUT_TOG &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &bt BT_CLR &trans
-                                                         &to_BASE &trans &trans &kp SPACE &trans
+   &trans &kp F1  &kp F2  &kp F3  &kp F4  &kp F5        &kp F11      &kp HOME     &kp UP       &kp END      &kp PG_UP  &trans
+   &trans &kp F6  &kp F7  &kp F8  &kp F9  &kp F10       &kp F12      &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_DN  &trans
+   &trans &none   &none   &none   &none   &none         &none        &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none      &trans
+                                 &to_BASE &trans &trans &kp SPACE &trans
                         >;
                 };
 
