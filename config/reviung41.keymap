@@ -183,9 +183,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "BACKSPACE_TAP_SHIFT_HOLD";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <170>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <170>;
          // global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
@@ -194,9 +194,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "SPACE_TAP_MO_SYM_HOLD";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <170>;
+            quick-tap-ms = <170>;
          // global-quick-tap;
             bindings = <&mo>, <&kp>;
         };
