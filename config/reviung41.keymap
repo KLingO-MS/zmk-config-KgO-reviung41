@@ -198,7 +198,7 @@
             tapping-term-ms = <180>;
             quick-tap-ms = <180>;
          // global-quick-tap;
-            bindings = <&mo _SYM>, <&kp>;
+            bindings = <&mo>, <&kp>;
         };
 
         rch: reset-combo-hold {
@@ -249,7 +249,7 @@
    &kp ESC   &kp Q   &kp F &kp V &kp P &kp B       &kp K &kp L &kp U    &kp Y    &kp J   &kp DEL 
    &kp LGUI  &kp A   &kp R &kp S &kp T &kp G       &kp M &kp N &kp E    &kp I    &kp O   &kp TAB 
    &kp LCTRL &kp SQT &kp Z &kp C &kp D &kp W       &kp X &kp H &com_sem &dot_col &kp DQT &kp INS 
-                 &nav_td &bspctap LSHIFT BSPC &kp ENTER &spctap X SPACE &kp LALT
+                 &nav_td &bspctap LSHIFT BSPC &kp ENTER &spctap _SYM SPACE &kp LALT
                         >;
                 };
 
