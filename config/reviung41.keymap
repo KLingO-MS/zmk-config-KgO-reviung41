@@ -5,82 +5,82 @@
  */
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/rgb.h>
+// #include <dt-bindings/zmk/bt.h>
+// #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define _BASE    0
 #define _SYM     1
 #define _NAV     2
 
-&led_strip { chain-length = <7>; };
+// &led_strip { chain-length = <7>; };
 
 / {
     macros {
-        to_BASE: to_BASE {
-            label = "ZM_to_BASE";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings
-                = <&rgb_ug RGB_COLOR_HSB(15,30,3)>
-                , <&to _BASE>
-                ;
-        };
+        // to_BASE: to_BASE {
+        //     label = "ZM_to_BASE";
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     wait-ms = <0>;
+        //     tap-ms = <0>;
+        //     bindings
+        //         = <&rgb_ug RGB_COLOR_HSB(15,30,3)>
+        //         , <&to _BASE>
+        //         ;
+        // };
 
-        to_NAV: to_NAV {
-            label = "ZM_to_NAV";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings
-                = <&rgb_ug RGB_COLOR_HSB(200,100,3)>
-                , <&to _NAV>
-                ;
-        };
+        // to_NAV: to_NAV {
+        //     label = "ZM_to_NAV";
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     wait-ms = <0>;
+        //     tap-ms = <0>;
+        //     bindings
+        //         = <&rgb_ug RGB_COLOR_HSB(200,100,3)>
+        //         , <&to _NAV>
+        //         ;
+        // };
 
-        mo_NAV: mo_NAV {
-            label = "ZM_mo_NAV";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings
-                = <&macro_tap &rgb_ug RGB_COLOR_HSB(200,100,3)>
-                , <&macro_press &mo _NAV>
-                , <&macro_pause_for_release>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(15,30,3)>
-                , <&macro_release &mo _NAV>
-                ;
-        };
+        // mo_NAV: mo_NAV {
+        //     label = "ZM_mo_NAV";
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     wait-ms = <0>;
+        //     tap-ms = <0>;
+        //     bindings
+        //         = <&macro_tap &rgb_ug RGB_COLOR_HSB(200,100,3)>
+        //         , <&macro_press &mo _NAV>
+        //         , <&macro_pause_for_release>
+        //         , <&macro_tap &rgb_ug RGB_COLOR_HSB(15,30,3)>
+        //         , <&macro_release &mo _NAV>
+        //         ;
+        // };
 
-        mo_SYM: mo_SYM {
-            label = "ZM_mo_SYM";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings
-                = <&macro_tap &rgb_ug RGB_COLOR_HSB(100,80,3)>
-                , <&macro_press &mo _SYM>
-                , <&macro_pause_for_release>
-                , <&macro_tap &rgb_ug RGB_COLOR_HSB(15,30,3)>
-                , <&macro_release &mo _SYM>
-                ;
-        };
+        // mo_SYM: mo_SYM {
+        //     label = "ZM_mo_SYM";
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     wait-ms = <0>;
+        //     tap-ms = <0>;
+        //     bindings
+        //         = <&macro_tap &rgb_ug RGB_COLOR_HSB(100,80,3)>
+        //         , <&macro_press &mo _SYM>
+        //         , <&macro_pause_for_release>
+        //         , <&macro_tap &rgb_ug RGB_COLOR_HSB(15,30,3)>
+        //         , <&macro_release &mo _SYM>
+        //         ;
+        // };
 
-        to_BOOT: to_BOOT {
-            label = "ZM_to_BOOT";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&rgb_ug RGB_COLOR_HSB(0,100,100)>
-                , <&rgb_ug RGB_ON>
-                , <&bootloader>
-                ;
-        };
+        // to_BOOT: to_BOOT {
+        //     label = "ZM_to_BOOT";
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     bindings
+        //         = <&rgb_ug RGB_COLOR_HSB(0,100,100)>
+        //         , <&rgb_ug RGB_ON>
+        //         , <&bootloader>
+        //         ;
+        // };
     };
 };
 
@@ -93,17 +93,17 @@
             bindings = <&rch A A>;
         };
 
-        combo_RGB_TOG {
-            timeout-ms = <50>;
-            key-positions = <17 18>;
-            bindings = <&rgb_ug RGB_TOG>;
-        };
+        // combo_RGB_TOG {
+        //     timeout-ms = <50>;
+        //     key-positions = <17 18>;
+        //     bindings = <&rgb_ug RGB_TOG>;
+        // };
 
-        combo_RGB_EFF {
-            timeout-ms = <50>;
-            key-positions = <29 30>;
-            bindings = <&rgb_ug RGB_EFF>;
-        };
+        // combo_RGB_EFF {
+        //     timeout-ms = <50>;
+        //     key-positions = <29 30>;
+        //     bindings = <&rgb_ug RGB_EFF>;
+        // };
 
         combo_PRTSCRN {
             timeout-ms = <50>;
@@ -176,7 +176,7 @@
             label = "LOCK_NAVI";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&mo_NAV>, <&to_NAV>;
+            bindings = <&mo _NAV>, <&to _NAV>;
         };
  
         bspctap: backspace-tap {
@@ -198,7 +198,7 @@
             tapping-term-ms = <180>;
             quick-tap-ms = <180>;
          // global-quick-tap;
-            bindings = <&mo_SYM>, <&kp>;
+            bindings = <&mo _SYM>, <&kp>;
         };
 
         rch: reset-combo-hold {
@@ -207,7 +207,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <2500>;
-            bindings = <&to_BOOT>, <&sys_reset>;
+            bindings = <&bootloader>, <&sys_reset>;
         };
 
         com_sem: comma_semi {
