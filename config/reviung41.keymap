@@ -105,11 +105,11 @@
         //     bindings = <&rgb_ug RGB_EFF>;
         // };
 
-        combo_PRTSCRN {
-            timeout-ms = <50>;
-            key-positions = <11 35>;
-            bindings = <&kp PSCRN>;
-        };
+        // combo_PRTSCRN {
+        //     timeout-ms = <50>;
+        //     key-positions = <11 35>;
+        //     bindings = <&kp PSCRN>;
+        // };
 
         combo_LPAR {
             timeout-ms = <30>;
@@ -239,19 +239,34 @@
                 compatible = "zmk,keymap";
 
                 base_layer {
-// ColemaSK
-// ------------------------------------------------------------------------------
-// | ESC  |  Q  |  F  |  V  |  P  |  B  |   |  K  |  L  |  U  |  Y  |  J  | DEL |
-// | GUI  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  | TAB |
-// | CTRL |  '  |  Z  |  C  |  D  |  W  |   |  X  |  H  | , ; | . : |  "  | INS |
-//        | (LOCK)_NAV | SHIFT(BKSPC) | ENTER | _SYM(SPC) | ALT |
+// QWERTY
+// -------------------------------------------------------------------------------
+// | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BSPC |
+// | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  | ' " | DEL  |
+// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  | , ; | . : | ? ! | GUI  |
+//               | (LOCK)_NAV | SHIFT | ENTER | _SYM(SPC) | ALT |
                         bindings = <
-   &kp ESC   &kp Q   &kp F &kp V &kp P &kp B       &kp K &kp L &kp U    &kp Y    &kp J   &kp DEL 
-   &kp LGUI  &kp A   &kp R &kp S &kp T &kp G       &kp M &kp N &kp E    &kp I    &kp O   &kp TAB 
-   &kp LCTRL &kp SQT &kp Z &kp C &kp D &kp W       &kp X &kp H &com_sem &dot_col &kp DQT &kp INS 
-                 &nav_td &bspctap LSHIFT BSPC &kp ENTER &spctap _SYM SPACE &kp LALT
+   &kp ESC   &kp Q  &kp W  &kp E  &kp R  &kp T       &kp Y  &kp U  &kp I     &kp O     &kp P     &kp BSPC 
+   &kp TAB   &kp A  &kp S  &kp D  &kp F  &kp G       &kp H  &kp J  &kp K     &kp L     &kp SQT   &kp DEL 
+   &kp LCTRL &kp Z  &kp X  &kp C  &kp V  &kp B       &kp N  &kp M  &com_sem  &dot_col  &qmk_exc  &kp LGUI 
+                           &nav_td &kp LSHIFT &kp ENTER &spctap _SYM SPACE &kp LALT
                         >;
                 };
+
+//                 base_layer {
+// // ColemaSK
+// // ------------------------------------------------------------------------------
+// // | ESC  |  Q  |  F  |  V  |  P  |  B  |   |  K  |  L  |  U  |  Y  |  J  | DEL |
+// // | GUI  |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  | TAB |
+// // | CTRL |  '  |  Z  |  C  |  D  |  W  |   |  X  |  H  | , ; | . : |  "  | INS |
+// //        | (LOCK)_NAV | SHIFT(BKSPC) | ENTER | _SYM(SPC) | ALT |
+//                         bindings = <
+//    &kp ESC   &kp Q   &kp F &kp V &kp P &kp B       &kp K &kp L &kp U    &kp Y    &kp J   &kp DEL 
+//    &kp LGUI  &kp A   &kp R &kp S &kp T &kp G       &kp M &kp N &kp E    &kp I    &kp O   &kp TAB 
+//    &kp LCTRL &kp SQT &kp Z &kp C &kp D &kp W       &kp X &kp H &com_sem &dot_col &kp DQT &kp INS 
+//                  &nav_td &bspctap LSHIFT BSPC &kp ENTER &spctap _SYM SPACE &kp LALT
+//                         >;
+//                 };
 
 //                 base_layer {
 // // ENGRAM SK
@@ -272,27 +287,27 @@
 // -----------------------------------------------------------------------------
 // |  ˇ  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  ˇ  |
 // |  ˇ  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  ˇ  |
-// |  ˇ  |  \  |  ?  |  _  |  -  |  `  |   |  ~  |  +  |  =  |  |  |  /  |  ˇ  |
+// |  ˇ  |  ?  |  \  |  _  |  -  |  `  |   |  ~  |  +  |  =  |  /  |  |  |  ˇ  |
 //                        | SPC |  ˇ  |  ˇ  |     |  ˇ  |
                         bindings = <
-   &trans &kp EXCL &kp AT    &kp HASH  &kp DLLR  &kp PRCNT       &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR &trans
-   &trans &kp N1   &kp N2    &kp N3    &kp N4    &kp N5          &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &trans
-   &trans &kp BSLH &kp QMARK &kp UNDER &kp MINUS &kp GRAVE       &kp TILDE &kp PLUS  &kp EQUAL &kp PIPE  &kp FSLH &trans
-                                         &kp SPACE &trans &trans &trans &trans
+   &trans &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT       &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR &trans
+   &trans &kp N1    &kp N2    &kp N3    &kp N4    &kp N5          &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &trans
+   &trans &kp QMARK &kp BSLH  &kp UNDER &kp MINUS &kp GRAVE       &kp TILDE &kp PLUS  &kp EQUAL &kp FSLH  &kp PIPE &trans
+                                        &none &kp SPACE &trans &trans &trans
                         >;
                 };
 
                 nav_layer {
 // ---------------------------------------------------------------------------------
-// |  ˇ  |  F1 |  F2 |  F3 |  F4 |  F5 |   | F11 | HOME |  UP  | END  | PGUP |  ˇ  |
-// |  ˇ  |  F6 |  F7 |  F8 |  F9 | F10 |   | F12 | LEFT | DOWN | RGHT | PGDN |  ˇ  |
-// |  ˇ  |     |     |     |     |     |   |     | VOL- | MUTE | VOL+ |      |  ˇ  |
+// |  ˇ  |  F1 |  F2 |  F3 |  F4 | NEXT |   | VOL+ | HOME |  UP  | END  | PGUP |  ˇ  |
+// |  ˇ  |  F5 |  F6 |  F7 |  F8 | PLAY |   | MUTE | LEFT | DOWN | RGHT | PGDN |  ˇ  |
+// |  ˇ  |  F9 | F10 | F11 | F12 | PREV |   | VOL- | INS  |      |      | PRN  |  ˇ  |
 //                        | _BASE |  ˇ  |  ˇ  | SPC |  ˇ  |
                         bindings = <
-   &trans &kp F1  &kp F2  &kp F3  &kp F4  &kp F5        &kp F11      &kp HOME     &kp UP       &kp END      &kp PG_UP  &trans
-   &trans &kp F6  &kp F7  &kp F8  &kp F9  &kp F10       &kp F12      &kp LEFT     &kp DOWN     &kp RIGHT    &kp PG_DN  &trans
-   &trans &none   &none   &none   &none   &none         &none        &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none      &trans
-                                 &to _BASE &trans &trans &kp SPACE &trans
+   &trans &kp F1  &kp F2  &kp F3  &kp F4  &kp C_NEXT      &kp C_VOL_UP &kp HOME &kp UP   &kp END    &kp PG_UP  &trans
+   &trans &kp F5  &kp F6  &kp F7  &kp F8  &kp C_PP        &kp C_MUTE   &kp LEFT &kp DOWN &kp RIGHT  &kp PG_DN  &trans
+   &trans &kp F9  &kp F10 &kp F11 &kp F12 &kp C_PREV      &kp C_VOL_DN &kp INS  &none    &none      &kp PSCRN  &trans
+                                  &to _BASE &trans &trans &kp SPACE &trans
                         >;
                 };
 
