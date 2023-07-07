@@ -2,13 +2,7 @@
 #include <dt-bindings/led/led.h>
 
 &pinctrl {
-    spi1_default: spi1_default {
-        group1 {
-            pinmux = <RP2040_PINMUX(0, RP2_PINCTRL_GPIO_FUNC_SPI)>;
-        };
-    };
-
-    spi1_sleep: spi1_sleep {
+    spi0_default: spi0_default {
         group1 {
             pinmux = <RP2040_PINMUX(0, RP2_PINCTRL_GPIO_FUNC_SPI)>;
         };
@@ -19,9 +13,9 @@
     compatible = "raspberrypi,pico-spi", "arm,pl022";
     status = "okay";
 
-    pinctrl-0 = <&spi1_default>;
-    pinctrl-1 = <&spi1_sleep>;
-    pinctrl-names = "default", "sleep";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-names = "default";
+    clock-frequency = <2000000>;
 
     led_strip: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";
@@ -29,7 +23,7 @@
 
         /* SPI */
         reg = <0>; /* ignored, but necessary for SPI bindings */
-        spi-max-frequency = <4000000>;
+        spi-max-frequency = <2000000>;
 
         /* WS2812 */
         chain-length = <7>;
