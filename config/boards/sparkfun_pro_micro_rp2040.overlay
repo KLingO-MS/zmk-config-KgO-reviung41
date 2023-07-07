@@ -4,13 +4,13 @@
 &pinctrl {
     spi1_default: spi1_default {
         group1 {
-            pinmux = <RP2040_PINMUX(1, RP2_PINCTRL_GPIO_FUNC_SPI)>;
+            pinmux = <RP2040_PINMUX(0, RP2_PINCTRL_GPIO_FUNC_SPI)>;
         };
     };
 
     spi1_sleep: spi1_sleep {
         group1 {
-            pinmux = <RP2040_PINMUX(1, RP2_PINCTRL_GPIO_FUNC_SPI)>;
+            pinmux = <RP2040_PINMUX(0, RP2_PINCTRL_GPIO_FUNC_SPI)>;
         };
     };
 };
