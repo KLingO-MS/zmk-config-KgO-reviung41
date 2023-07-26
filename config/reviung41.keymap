@@ -5,10 +5,10 @@
  */
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/led/led.h>
+// #include <dt-bindings/led/led.h>
 // #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/outputs.h>
+// #include <dt-bindings/zmk/rgb.h>
+// #include <dt-bindings/zmk/outputs.h>
 
 
 #define _BASE    0
@@ -245,14 +245,14 @@
 // QWERTY
 // -------------------------------------------------------------------------------
 // | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BSPC |
-// | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  | ' " | DEL  |
-// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  | , ; | . : | ? ! | GUI  |
-//               | (LOCK)_NAV | SHIFT | ENTER | _SYM(SPC) | ALT |
+// | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  | ' " | SHFT |
+// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  | , ; | . : | ? ! | ENTR |
+//                      | LALT | _SYM | SPACE | _NAV | LGUI |
                         bindings = <
-   &kp ESC   &kp Q  &kp W  &kp E  &kp R  &kp T       &kp Y  &kp U  &kp I     &kp O     &kp P     &kp BSPC 
-   &kp TAB   &kp A  &kp S  &kp D  &kp F  &kp G       &kp H  &kp J  &kp K     &kp L     &kp SQT   &kp DEL 
-   &kp LCTRL &kp Z  &kp X  &kp C  &kp V  &kp B       &kp N  &kp M  &com_sem  &dot_col  &qmk_exc  &kp LGUI 
-                           &nav_td &kp LSHIFT &kp ENTER &spctap _SYM SPACE &kp LALT
+   &kp ESC    &kp Q  &kp W  &kp E  &kp R  &kp T       &kp Y  &kp U  &kp I     &kp O     &kp P     &kp BSPC 
+   &kp LSHFT  &kp A  &kp S  &kp D  &kp F  &kp G       &kp H  &kp J  &kp K     &kp L     &kp SQT   &kp LSHFT
+   &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B       &kp N  &kp M  &com_sem  &dot_col  &qmk_exc  &kp ENTER
+                           &kp LALT &mo _SYM &kp SPACE &mo _NAV &kp LGUI
                         >;
                 };
 
@@ -291,26 +291,26 @@
 // |  ˇ  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  ˇ  |
 // |  ˇ  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  ˇ  |
 // |  ˇ  |  ?  |  \  |  _  |  -  |  `  |   |  ~  |  +  |  =  |  /  |  |  |  ˇ  |
-//                        | SPC |  ˇ  |  ˇ  |     |  ˇ  |
+//                        |  ˇ  |     |  ˇ  | SPC |  ˇ  |
                         bindings = <
    &trans &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT       &kp CARET &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR &trans
    &trans &kp N1    &kp N2    &kp N3    &kp N4    &kp N5          &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &trans
    &trans &kp QMARK &kp BSLH  &kp UNDER &kp MINUS &kp GRAVE       &kp TILDE &kp PLUS  &kp EQUAL &kp FSLH  &kp PIPE &trans
-                                        &none &kp SPACE &trans &trans &trans
+                                              &trans &none &trans &kp SPACE &trans
                         >;
                 };
 
                 nav_layer {
-// ---------------------------------------------------------------------------------
-// |  ˇ  |  F1 |  F2 |  F3 |  F4 | NEXT |   | VOL+ | HOME |  UP  | END  | PGUP |  ˇ  |
+// -----------------------------------------------------------------------------------
+// |  ˇ  |  F1 |  F2 |  F3 |  F4 | NEXT |   | VOL+ | HOME |  UP  | END  | PGUP | DEL |
 // |  ˇ  |  F5 |  F6 |  F7 |  F8 | PLAY |   | MUTE | LEFT | DOWN | RGHT | PGDN |  ˇ  |
-// |  ˇ  |  F9 | F10 | F11 | F12 | PREV |   | VOL- | INS  |      |      | PRN  |  ˇ  |
+// |  ˇ  |  F9 | F10 | F11 | F12 | PREV |   | VOL- | INS  | TAB  |      | PRN  |  ˇ  |
 //                        | _BASE |  ˇ  |  ˇ  | SPC |  ˇ  |
                         bindings = <
-   &trans &kp F1  &kp F2  &kp F3  &kp F4  &kp C_NEXT      &kp C_VOL_UP &kp HOME &kp UP   &kp END    &kp PG_UP  &trans
+   &trans &kp F1  &kp F2  &kp F3  &kp F4  &kp C_NEXT      &kp C_VOL_UP &kp HOME &kp UP   &kp END    &kp PG_UP  &kp DEL
    &trans &kp F5  &kp F6  &kp F7  &kp F8  &kp C_PP        &kp C_MUTE   &kp LEFT &kp DOWN &kp RIGHT  &kp PG_DN  &trans
-   &trans &kp F9  &kp F10 &kp F11 &kp F12 &kp C_PREV      &kp C_VOL_DN &kp INS  &rgb_ug RGB_TOG    &rgb_ug RGB_EFF      &kp PSCRN  &trans
-                                  &to _BASE &trans &trans &kp SPACE &trans
+   &trans &kp F9  &kp F10 &kp F11 &kp F12 &kp C_PREV      &kp C_VOL_DN &kp INS  &kp TAB  &none      &kp PSCRN  &trans
+                                  &trans &kp SPACE &trans &none &trans
                         >;
                 };
 
